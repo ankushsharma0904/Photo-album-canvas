@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/canvas.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+</head>
+
+<body style="background-color: #2F9599;">
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">CANVAS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="gallery.html">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="canvas.html">Canvas</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="nav-wrapper container">
+        <span class="nav-header">
+            <h1 style="color: #9DE0AD; text-align: center;">Welcome to the Canvas Section</h1>
+        </span>
+        <ul class="right image-save">
+            <button class="btn btn-flat blue white-text" onclick="saveImage()">Save</button>
+            <button class="btn btn-flat red white-text" onclick="resetImage()">Reset</button>
+        </ul>
+    </div>
+    
+
+    <section id="'canvas" style="background-color: #a8e9a892;">
+        
+        <div class="container mt-5"> 
+            <div><img id="sourceImage" crossorigin="anonymous"></div>
+    
+            <div class="image-preview">
+                <canvas id="canvas" height="0"></canvas>
+            </div>
+            <div class="container app">
+                <!-- Text to be shown at the beginning of the application -->
+                <div class="help-text center-align">
+                    <h5>Please Select an Image to Start Editing</h5>
+                </div>
+    
+                <!-- Dropdown list for selecting image names -->
+                <div class="file-controls">
+                    <div class="input-field col s12">
+                        <select id="imageSelect" onchange="loadImage(this.value)">
+                            <option value="" disabled selected>Select an image</option>
+                            <option value="american-bully.jpg">American Bully</option>
+                            <option value="golden-retriever.jpg">Golden Retriever</option>
+                            <option value="chihuahua.jpg">Chihuahua</option>
+                            <!-- Add more options as needed -->
+                        </select>
+                        
+                    </div>
+                </div>
+    
+                <!-- All the image controls that will be used for modifying the image -->
+                <div class="image-controls">
+                    <!-- Image controls go here -->
+                    <h6>Image Controls</h6>
+                    <div class="row">
+                        <div class="col s6">
+                            <span class="range-field">
+                                <label for="brightnessSlider">
+                                  Brightness
+                                </label>
+                                <input id="brightnessSlider"
+                                       type="range" value="100"
+                                       min="0" max="300"
+                                       onchange="applyFilter()">
+                            </span>
+                        </div>
+                        <div class="col s6">
+                            <span class="range-field">
+                                <label for="contrastSlider">
+                                  Contrast
+                                </label>
+                                <input id="contrastSlider"
+                                       type="range" value="100"
+                                       min="0" max="200"
+                                       onchange="applyFilter()">
+                            </span>
+                        </div>
+                    </div>
+         
+                    <div class="row">
+                        <div class="col s6">
+                            <span class="range-field">
+                                <label for="grayscaleSlider">
+                                  Grayscale
+                                </label>
+                                <input id="grayscaleSlider"
+                                       type="range" value="0"
+                                       min="0" max="100"
+                                       onchange="applyFilter()">
+                            </span>
+                        </div>
+                        <div class="col s6">
+                            <span class="range-field">
+                                <label for="saturationSlider">
+                                  Saturation
+                                </label>
+                                <input id="saturationSlider"
+                                       type="range" value="100"
+                                       min="0" max="300"
+                                       onchange="applyFilter()">
+                            </span>
+                        </div>
+                    </div>
+         
+                    <div class="row">
+                        <div class="col s6">
+                            <span class="range-field">
+                                <label for="sepiaSlider">
+                                  Sepia
+                                </label>
+                                <input id="sepiaSlider"
+                                       type="range" value="0"
+                                       min="0" max="200"
+                                       onchange="applyFilter()">
+                            </span>
+                        </div>
+                        <div class="col s6">
+                            <span class="range-field">
+                                <label for="hueRotateSlider">
+                                  Hue
+                                </label>
+                                <input id="hueRotateSlider"
+                                       type="range" value="0"
+                                       min="0" max="360"
+                                       onchange="applyFilter()">
+                            </span>
+                        </div>
+                    </div>
+                </div>
+    
+                <!-- Preset filters buttons -->
+                <div class="preset-filters">
+                    <!-- Preset filters buttons go here -->
+                    <h6>Preset Filters</h6>
+                    <button class="btn green" onclick="brightenFilter()"> Brighten </button>
+                    <button class="btn green" onclick="bwFilter()"> Black and White </button>
+                    <button class="btn green" onclick="funkyFilter()"> Funky </button>
+                    <button class="btn green" onclick="vintageFilter()"> Vintage </button>
+                </div>
+    
+                <!-- other Functionalities -->
+                <div class="other-functions">
+                        <h6>Other Functionalities</h6>
+                        <button class="btn green" onclick="createAvatar()">Avatar</button> 
+                        <button class="btn green" onclick="createThumbnail()">Thumbnail</button>
+                </div>
+            </div>
+        </div>
+    </section>
+        
+    <a id="link" style="display: none;"></a>
+    
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Load the script for the editor -->
+    <script src="js/canvas.js" defer></script>
+    
+    <!-- Compiled and minified JavaScript for Materialize CSS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
+    <!-- Custom script for initializing Materialize components -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize dropdowns
+            var elems = document.querySelectorAll('select');
+            var instances = M.FormSelect.init(elems);
+        });
+    </script>
+    
+</body>
+</html>

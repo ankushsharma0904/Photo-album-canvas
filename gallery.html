@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+</head>
+
+<body style="background-color: #2F9599;">
+    <!-- Navigation bar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Photo Album</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="gallery.html">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="canvas.html">Canvas</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+    <section id="gallery" class="gallery-block compact-gallery">
+        <div class="container">
+            <div class="gallery-heading text-center mb-5">
+                <h2 class="text-uppercase">Explore My Gallery</h2>
+            </div>
+            <div class="row no-gutters">
+                <!-- Gallery items go here -->
+                <div class="col-md-6 col-lg-4 item zoom-on-hover">
+                    <a class="lightbox" href="img/american-bully.jpg">
+                        <img class="img-fluid image" src="img/american-bully.jpg" onclick="loadImage('american-bully.jpg')">
+                        <span class="description">
+                            <span class="description-heading">American Bully</span>
+                        </span>
+                    </a>
+                </div>
+
+                <div class="col-md-6 col-lg-4 item zoom-on-hover">
+                    <a class="lightbox" href="img/tamaskan.jpg">
+                        <img class="img-fluid image" src="img/tamaskan.jpg">
+                        <span class="description">
+                            <span class="description-heading">Tamaskan</span>
+                        </span>
+                    </a>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 item zoom-on-hover">
+                    <a class="lightbox" href="img/chihuahua.jpg">
+                        <img class="img-fluid image" src="img/chihuahua.jpg">
+                        <span class="description">
+                            <span class="description-heading">Chihuahua</span>
+                        </span>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4 item zoom-on-hover">
+                    <a class="lightbox" href="img/golden-retriever.jpg">
+                        <img class="img-fluid image" src="img/golden-retriever.jpg">
+                        <span class="description">
+                            <span class="description-heading">Golden Retriever</span>
+                        </span>
+                        </a>
+                    </div>
+                <div class="col-md-6 col-lg-4 item zoom-on-hover">
+                    <a class="lightbox" href="img/dachshund.jpg">
+                        <img class="img-fluid image" src="img/dachshund.jpg">
+                        <span class="description">
+                            <span class="description-heading">Dachshund</span>
+                        </span>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4 item zoom-on-hover">
+                    <a class="lightbox" href="img/german-shepherd.jpg">
+                        <img class="img-fluid image" src="img/german-shepherd.jpg">
+                        <span class="description">
+                            <span class="description-heading">German Shepherd</span>
+                        </span>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4 item zoom-on-hover">
+                    <a class="lightbox" href="img/gordon-setter.jpg">
+                        <img class="img-fluid image" src="img/gordon-setter.jpg">
+                        <span class="description">
+                            <span class="description-heading">Gordon Setter</span>
+                        </span>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4 item zoom-on-hover">
+                    <a class="lightbox" href="img/chow-chow.jpg">
+                        <img class="img-fluid image" src="img/chow-chow.jpg">
+                        <span class="description">
+                            <span class="description-heading">Chow Chow</span>
+                        </span>
+                    </a>
+                </div>
+                <div class="col-md-6 col-lg-4 item zoom-on-hover">
+                    <a class="lightbox" href="img/pug.jpg">
+                        <img class="img-fluid image" src="img/pug.jpg">
+                        <span class="description">
+                            <span class="description-heading">Pug</span>
+                        </span>
+                    </a>
+                </div>
+
+                <div class="col-md-6 col-lg-4 item zoom-on-hover">
+                    <a class="lightbox" href="img/miniature-pinscher.jpg">
+                        <img class="img-fluid image" src="img/miniature-pinscher.jpg">
+                        <span class="description">
+                            <span class="description-heading">Miniature Pinscher</span>
+                        </span>
+                    </a>
+                </div>
+
+                <div class="col-md-6 col-lg-4 item zoom-on-hover">
+                    <a class="lightbox" href="img/shetland_sheepdog.jpg">
+                        <img class="img-fluid image" src="img/shetland_sheepdog.jpg">
+                        <span class="description">
+                            <span class="description-heading">Shetland Sheepdog</span>
+                        </span>
+                    </a>
+                </div>
+
+                <div class="col-md-6 col-lg-4 item zoom-on-hover">
+                    <a class="lightbox" href="img/pomeranian.jpg">
+                        <img class="img-fluid image" src="img/pomeranian.jpg">
+                        <span class="description">
+                            <span class="description-heading">Pomeranian</span>
+                        </span>
+                    </a>
+                </div>
+
+                <div class="col-md-6 col-lg-4 item zoom-on-hover">
+                    <a class="lightbox" href="img/pharaoh-hound.jpg">
+                        <img class="img-fluid image" src="img/pharaoh-hound.jpg">
+                        <span class="description">
+                            <span class="description-heading">Pharaoh Hound</span>
+                        </span>
+                    </a>
+                </div>
+
+                <div class="col-md-6 col-lg-4 item zoom-on-hover">
+                    <a class="lightbox" href="img/shiba-inu.jpg">
+                        <img class="img-fluid image" src="img/shiba-inu.jpg">
+                        <span class="description">
+                            <span class="description-heading">Shiba Inu</span>
+                        </span>
+                    </a>
+                </div>
+                
+                
+                <div class="col-md-6 col-lg-4 item zoom-on-hover">
+                    <a class="lightbox" href="img/billy.jpg">
+                        <img class="img-fluid image" src="img/canary-mastiff-presa-canario.jpg">
+                        <span class="description">
+                            <span class="description-heading">Canary Mastiff</span>
+                        </span>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+</html>
