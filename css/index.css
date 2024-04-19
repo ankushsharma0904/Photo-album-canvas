@@ -3,43 +3,5 @@ body {
     background-size: cover; /* Cover the entire viewport */
     background-repeat: no-repeat; /* Do not repeat the background image */
     background-attachment: fixed; /* Fix the background image in place */
-    
+
   }
-
-.col-md-4 {
-    position: relative;
-}
-
-.github-link {
-    position: absolute;
-    top: 0;
-    width: 95%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center; /* Changed from align-items: bottom; */
-    border-radius: 10px; /* Adjust as needed */
-    background-color: rgba(255, 255, 255, 0.7); /* Adjust opacity as needed */
-    bottom: 0; /* Adjust as needed */
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-
-.col-md-4:hover .github-link {
-    opacity: 1;
-}
-
-.github-logo {
-    max-width: 30%; /* Adjust as needed */
-    max-height: 30%; /* Adjust as needed */
-    border-radius: 50px; /* Adjust as needed */
-}
-
-.github-logo-sm {
-    max-width: 10%; /* Adjust as needed */
-    max-height: 10%; /* Adjust as needed */
-    border-radius: 50px; /* Adjust as needed */
-}

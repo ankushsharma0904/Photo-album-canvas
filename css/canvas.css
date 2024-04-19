@@ -1,13 +1,14 @@
-
 #sourceImage,
 .image-controls,
 .image-save,
 .preset-filters {
     display: none;
 }
+
 .other-functions {
     display: none;
 }
+
 .image-preview {
     display: flex;
     justify-content: center;
@@ -38,14 +39,16 @@ select {
 /* Custom styles for the canvas section */
 #canvas h1 {
     font-size: 2.5rem;
-    text-shadow: 2px 2px 4px rgba(154, 32, 32, 0.5); /* Adding a shadow effect */
+    text-shadow: 2px 2px 4px rgba(59, 51, 51, 0.5);
+    /* Adding a shadow effect */
 }
 
 /* Custom styles for the text color of various sections */
-.image-controls h6, 
+.image-controls h6,
 .preset-filters h6,
 .other-functions h6 {
-    color: #474747; /* Set text color to white */
+    color: #474747;
+    /* Set text color to white */
     padding: 10px;
 }
 
@@ -54,21 +57,28 @@ select {
 .container {
     padding-top: 10px;
     padding-bottom: 10px;
-    
-    margin: 0 auto; /* Add space below each container */
+
+    margin: 0 auto;
+    /* Add space below each container */
 }
 
 /* Add space at the end */
 body {
-    padding-bottom: 70px; /* Add space at the bottom of the body */
-    background-image: url('../img/dark-theme.jpg'); /* Replace 'background-image.jpg' with the path to your background image */
-    background-size: cover; /* Cover the entire viewport */
-    background-repeat: no-repeat; /* Do not repeat the background image */
-    background-attachment: fixed; /* Fix the background image in place */
+    padding-bottom: 70px;
+    /* Add space at the bottom of the body */
+    background-image: url('../img/dark-theme.jpg');
+    /* Replace 'background-image.jpg' with the path to your background image */
+    background-size: cover;
+    /* Cover the entire viewport */
+    background-repeat: no-repeat;
+    /* Do not repeat the background image */
+    background-attachment: fixed;
+    /* Fix the background image in place */
 }
 
 
 /* Set label tag color to black */
 .container label {
-    color: #000000; /* Black color */
+    color: #000000;
+    /* Black color */
 }

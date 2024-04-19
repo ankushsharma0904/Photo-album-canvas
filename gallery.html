@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,42 +9,45 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/gallery.css">
     <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
 </head>
 
-<body>
+<body style="background-color: #3c3c3c;">
     <!-- Navigation bar -->
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Photo Album</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="gallery.html">Gallery</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="canvas.html">Canvas</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-</header>
+            <a class="navbar-brand" href="index.html">Photo Album</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="canvas.html">Canvas</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
-    <section id="gallery" class="gallery-block compact-gallery">
+    <section id="gallery" class="gallery-block compact-gallery pb-5">
         <div class="container">
             <div class="gallery-heading text-center mb-5">
-                <h2 class="text-uppercase">Explore My Gallery</h2>
+                <h2 class="text-uppercase"><br><br>Explore My Gallery</h2>
             </div>
             <div class="row no-gutters">
                 <!-- Gallery items go here -->
                 <div class="col-md-6 col-lg-4 item zoom-on-hover">
                     <a class="lightbox" href="img/american-bully.jpg">
-                        <img class="img-fluid image" src="img/american-bully.jpg" onclick="loadImage('american-bully.jpg')">
+                        <img class="img-fluid image" src="img/american-bully.jpg"
+                            onclick="loadImage('american-bully.jpg')">
                         <span class="description">
                             <span class="description-heading">American Bully</span>
                         </span>
@@ -58,7 +62,7 @@
                         </span>
                     </a>
                 </div>
-                
+
                 <div class="col-md-6 col-lg-4 item zoom-on-hover">
                     <a class="lightbox" href="img/chihuahua.jpg">
                         <img class="img-fluid image" src="img/chihuahua.jpg">
@@ -73,8 +77,8 @@
                         <span class="description">
                             <span class="description-heading">Golden Retriever</span>
                         </span>
-                        </a>
-                    </div>
+                    </a>
+                </div>
                 <div class="col-md-6 col-lg-4 item zoom-on-hover">
                     <a class="lightbox" href="img/dachshund.jpg">
                         <img class="img-fluid image" src="img/dachshund.jpg">
@@ -160,8 +164,8 @@
                         </span>
                     </a>
                 </div>
-                
-                
+
+
                 <div class="col-md-6 col-lg-4 item zoom-on-hover">
                     <a class="lightbox" href="img/billy.jpg">
                         <img class="img-fluid image" src="img/canary-mastiff-presa-canario.jpg">
@@ -170,11 +174,24 @@
                         </span>
                     </a>
                 </div>
-                
+
             </div>
         </div>
     </section>
-    
+
+    <footer class="fixed-bottom text-muted border-top p-2">
+        <div style="float: left;">
+            <a href="https://github.com/ankushsharma0904" target="_blank">
+                <img src="https://avatars.githubusercontent.com/u/58560124?s=400&u=2f607ef68401cb25753bcb2bfa9435c40b646361&v=4"
+                    alt="GitHub" class="mx-3 github-logo-sm">
+            </a>
+        </div>
+        <div style="float: right;">
+            <p class="fs-6 text-white mx-3">&copy; 2024 Ankush Sharma -- AM.SC.P2AML23003 -- M.Tech CSE AIML</p>
+        </div>
+        <div style="clear: both;"></div>
+    </footer>
+
     <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
@@ -183,4 +200,5 @@
 
 
 </body>
+
 </html>
