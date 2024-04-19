@@ -61,6 +61,10 @@ select {
 /* Add space at the end */
 body {
     padding-bottom: 70px; /* Add space at the bottom of the body */
+    background-image: url('../img/dark-theme.jpg'); /* Replace 'background-image.jpg' with the path to your background image */
+    background-size: cover; /* Cover the entire viewport */
+    background-repeat: no-repeat; /* Do not repeat the background image */
+    background-attachment: fixed; /* Fix the background image in place */
 }
 
 
